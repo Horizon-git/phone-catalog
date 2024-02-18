@@ -1,10 +1,13 @@
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
-import 'bulma/css/bulma.css';
-import '@fortawesome/fontawesome-free/css/all.css';
-import './index.scss';
+import { store } from './app/store';
 
-import { App } from './App';
+import { Root } from './Root';
 
-createRoot(document.getElementById('root') as HTMLDivElement)
-  .render(<App />);
+ReactDOM.render(
+  <Provider store={store}>
+    <Root />
+  </Provider>,
+  document.getElementById('root'),
+);
