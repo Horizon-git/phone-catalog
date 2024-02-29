@@ -113,6 +113,7 @@ export const ProductCard: FC<Props> = ({ product }) => {
         <button
           type="button"
           data-cy="addToFavorite"
+          aria-label="addToFavorite"
           className={classNames('favorites', { 'favorites--active': isFavorite })}
           onClick={addToFavorites}
         >

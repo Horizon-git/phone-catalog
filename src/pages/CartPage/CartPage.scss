@@ -24,11 +24,10 @@
   &__list {
     display: flex;
     flex-direction: column;
-    // min-width: 780px;
-    // max-width: 780px;
   }
 
   &__checkout {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;

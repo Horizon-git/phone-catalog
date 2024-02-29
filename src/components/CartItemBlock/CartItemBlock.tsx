@@ -40,6 +40,7 @@ export const CartItemBlock:React.FC<Props> = ({ item }) => {
           <button
             type="button"
             className="cart-item__delete"
+            aria-label="delete"
             onClick={onClickclear}
           >
             <span className="icon icon--close" />

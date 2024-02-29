@@ -163,6 +163,7 @@ export const ProductDetailsPage = () => {
                       {colors.map((color) => (
                         <button
                           key={color[0]}
+                          aria-label="changeColor"
                           className={classNames('details__colors__button', {
                             active: color[1] === currentColor,
                           })}
@@ -219,6 +220,7 @@ export const ProductDetailsPage = () => {
                     </button>
                     <button
                       type="button"
+                      aria-label="addToFavorite"
                       className="details__button-favorite"
                       data-cy="addToFavorite"
                       onClick={addToFavorites}

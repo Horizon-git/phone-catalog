@@ -38,13 +38,22 @@ export const Search: React.FC<Props> = ({ pageName }) => {
         onChange={(event) => handleQuery(event)}
       />
       {newQuery !== '' && (
-        <button type="button" className="search__button" onClick={reset}>
+        <button
+          aria-label="search"
+          type="button"
+          className="search__button"
+          onClick={reset}
+        >
           <span className="icon icon--cancel" />
         </button>
       )}
 
       {newQuery === '' && (
-        <button type="button" className="search__button">
+        <button
+          aria-label="search"
+          type="button"
+          className="search__button"
+        >
           <span className="icon icon--search" />
         </button>
       )}
