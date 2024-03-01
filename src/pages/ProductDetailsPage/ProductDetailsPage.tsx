@@ -37,7 +37,7 @@ export const ProductDetailsPage = () => {
 
   useEffect(() => {
     dispatch(fetchProductDetails(productId));
-  }, []);
+  }, [productId]);
 
   useEffect(() => {
     const foundProduct = products.find((item) => item.id === productId);

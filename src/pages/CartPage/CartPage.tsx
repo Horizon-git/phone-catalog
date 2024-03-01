@@ -4,6 +4,7 @@ import { useAppSelector } from '../../app/hooks';
 import { Notification } from '../../components/Notification/Notification';
 import { CartItemBlock } from '../../components/CartItemBlock/CartItemBlock';
 import { BackButton } from '../../components/BackButton/BackButton';
+import { getTotalCount } from '../../helpers/getTotalCount';
 
 export const CartPage: React.FC = () => {
   const cart = useAppSelector((state) => state.cart.cart);
@@ -14,9 +15,7 @@ export const CartPage: React.FC = () => {
     return obj.price * obj.quantity + sum;
   }, 0);
 
-  const totalCount = cart.reduce((sum, obj) => {
-    return obj.quantity + sum;
-  }, 0);
+  const totalCount = getTotalCount(cart);
 
   useEffect(() => {
     if (isCheckout) {

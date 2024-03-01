@@ -3,6 +3,7 @@ import {
   Link, NavLink, useLocation,
 } from 'react-router-dom';
 import { useAppSelector } from '../../app/hooks';
+import { getTotalCount } from '../../helpers/getTotalCount';
 import { Search } from '../Search/Search';
 import './Header.scss';
 import './Nav.scss';
@@ -81,7 +82,7 @@ export const Header = () => {
         <NavLink className={getIconClass} to="/cart">
           <span className="icon icon--cart" />
           {cart.length > 0 && (
-            <span className="icon__counter">{cart.length}</span>
+            <span className="icon__counter">{getTotalCount(cart)}</span>
           )}
         </NavLink>
       </div>
